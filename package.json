@@ -1,0 +1,19 @@
+{
+  "name": "tonguology",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonguebender/tonguology.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonguebender/tonguology/issues"
+  },
+  "homepage": "https://github.com/tonguebender/tonguology#readme"
+}
