@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tonguebender/tonguology/issues"
   },
-  "homepage": "https://github.com/tonguebender/tonguology#readme"
+  "homepage": "https://github.com/tonguebender/tonguology#readme",
+  "dependencies": {
+    "aws-sdk": "^2.390.0"
+  }
 }
