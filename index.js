@@ -1,14 +1,15 @@
-const AWS = require('aws-sdk');
-AWS.config.update({region: 'eu-west-2'});
+const debug = require('debug')('index');
+const TaskObserver = require('./lib/task-observer');
+const { process } = require('./lib/tasks');
+const tasks = new TaskObserver();
 
-const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
-
-const params = {};
-
-sqs.listQueues(params, function(err, data) {
-  if (err) {
-    console.log("Error", err);
-  } else {
-    console.log("Success", data.QueueUrls);
+tasks.on('task', async msg => {
+  debug({ msg });
+  try {
+    await process(msg);
+  } catch (e) {
+    debug('Error', e);
   }
 });
+
+tasks.start();

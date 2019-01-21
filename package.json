@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write \"lib/**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/tonguebender/tonguology#readme",
   "dependencies": {
-    "aws-sdk": "^2.390.0"
+    "aws-sdk": "^2.390.0",
+    "debug": "^4.1.1",
+    "prettier": "^1.15.3"
   }
 }
